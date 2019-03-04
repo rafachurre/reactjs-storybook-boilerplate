@@ -29,5 +29,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   style_theme: "primary",
-  style_isBlock: false
+  style_isBlock: false,
+  target: null
 };

@@ -2,6 +2,7 @@ import { configure, addParameters, addDecorator } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import React from 'react';
+import PrettyPropType from '@storybook/addon-info/dist/components/types/PrettyPropType';
 
 // Info Addon congif
 const Red = props => <span style={{ color: 'red' }} {...props} />;
@@ -18,7 +19,7 @@ addDecorator(withInfo({
               {property}
               {required ? <Red> *</Red> : null}
             </td>
-            <td style={borderStyle}>{propType.name}</td>
+            <td style={borderStyle}><PrettyPropType propType={propType}/></td>
             <td style={borderStyle}>{defaultValue}</td>
             <td style={borderStyle}>{description}</td>
           </tr>
